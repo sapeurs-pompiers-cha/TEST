@@ -1,17 +1,17 @@
-import { useAgent } from "@/hooks/use-agents";
-import { useRoute } from "wouter";
+import { useAgent } from "../hooks/use-agents";
+import { useRoute, Link } from "wouter";
 import { ArrowLeft, Phone, MapPin, Award, Calendar, CheckCircle2, XCircle, Plus, Clock, UserCheck, GraduationCap } from "lucide-react";
-import { Link } from "wouter";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { Badge } from "../components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { cn } from "../lib/utils";
 import { useState, useEffect } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { useTrainings, useCreateParticipation } from "@/hooks/use-trainings";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../components/ui/dialog";
+import { Button } from "../components/ui/button";
+import { useTrainings, useCreateParticipation } from "../hooks/use-trainings";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
+import { useToast } from "../hooks/use-toast";
+import { Input } from "../components/ui/input";
+
 
 const SUPERVISORS = [
   "L'HOSPITAL G.",
