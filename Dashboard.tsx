@@ -1,7 +1,8 @@
-import { useAgents } from "@/hooks/use-agents";
+import { useAgents } from "../hooks/use-agents";
 import { Users, Calendar as CalendarIcon, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+
 
 export default function Dashboard() {
   const { data: agents, isLoading: agentsLoading } = useAgents();
