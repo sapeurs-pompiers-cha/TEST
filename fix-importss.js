@@ -1,9 +1,8 @@
-import fs from "fs";
-import path from "path";
+const fs = require("fs");
+const path = require("path");
 
-const srcDir = path.join(process.cwd(), "src");
+const srcDir = path.join(__dirname, "src");
 
-// Fonction pour calculer le chemin relatif
 function getRelativeImport(filePath, target) {
   const fromDir = path.dirname(filePath);
   let relativePath = path.relative(fromDir, target);
@@ -13,12 +12,11 @@ function getRelativeImport(filePath, target) {
   return relativePath.replace(/\\/g, "/");
 }
 
-// Parcours des fichiers
 function walk(dir) {
-  const files = fs.readdirSync(dir);
-  for (const file of files) {
+  fs.readdirSync(dir).forEach(file => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
+
     if (stat.isDirectory()) {
       walk(fullPath);
     } else if (fullPath.endsWith(".ts") || fullPath.endsWith(".tsx")) {
@@ -46,7 +44,7 @@ function walk(dir) {
 
       fs.writeFileSync(fullPath, content, "utf-8");
     }
-  }
+  });
 }
 
 walk(srcDir);
