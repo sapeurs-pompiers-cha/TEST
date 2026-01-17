@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { useAgents, useCreateAgent } from "@/hooks/use-agents";
-import { AgentCard } from "@/components/AgentCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useAgents, useCreateAgent } from "../hooks/use-agents";
+import { AgentCard } from "../components/AgentCard";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../components/ui/dialog";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Plus, Search, Filter } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertAgentSchema, type InsertAgent } from "@shared/schema";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useToast } from "@/hooks/use-toast";
+import { insertAgentSchema, type InsertAgent } from "../lib/schema";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../components/ui/form";
+import { useToast } from "../hooks/use-toast";
 
 const RANKS = [
   "Sapeur 2ème classe",
