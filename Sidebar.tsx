@@ -1,7 +1,8 @@
 import { Link, useLocation } from "wouter";
 import { LayoutDashboard, Users, GraduationCap, Flame, Menu, X, CalendarDays, UserCheck } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import { useState } from "react";
+
 
 const NAV_ITEMS = [
   { label: "Tableau de bord", href: "/", icon: LayoutDashboard },
