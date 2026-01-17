@@ -1,5 +1,5 @@
 const fs = require("fs");
-const path = require("path"));
+const path = require("path");
 
 const srcDir = path.join(__dirname, "src");
 
