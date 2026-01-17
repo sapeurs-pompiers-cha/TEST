@@ -1,8 +1,9 @@
 import { User, MapPin, Award, Clock } from "lucide-react";
-import { cn } from "@/lib/utils";
-import type { AgentWithStats } from "@shared/schema";
+import { cn } from "../lib/utils";
+import type { AgentWithStats } from "../lib/schema";
 import { Link } from "wouter";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "../components/ui/progress";
+
 
 interface AgentCardProps {
   agent: AgentWithStats;
